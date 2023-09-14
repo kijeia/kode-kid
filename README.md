@@ -1,3 +1,1 @@
 # kode-kid
-
-# hello
