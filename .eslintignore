@@ -1,0 +1,4 @@
+commitlint.config.js
+postcss.config.js
+scripts/**/*.js
+public/**/*.js
