@@ -1,3 +1,33 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals","plugin:import/typescript"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    // NOTE: add warning for any types
+    "@typescript-eslint/no-explicit-any": "warn",
+    // NOTE: added this to prevent props plowing/drilling. since we're using typescript, we can use the types to define the props
+    // Don't overuse props spreading. Use it only when you need to pass 5 or more props to a component.
+    // Source: https://www.youtube.com/watch?v=b0IZo2Aho9Y&t=390s
+    "react/jsx-props-no-spreading": "off"
+  },
+  "overrides": [
+    {
+      // NOTE: Added this since the useSWR is imported outside the react function
+      // need to make the useSWR reusable
+      // Source: https://swr.vercel.app/docs/getting-started#make-it-reusable
+      "files": ["utils/swr/*.ts"],
+      "rules": {
+        "react-hooks/rules-of-hooks": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["*.config.js"]
 }
