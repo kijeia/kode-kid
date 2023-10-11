@@ -1,4 +1,6 @@
-commitlint.config.js
-postcss.config.js
-scripts/**/*.js
-public/**/*.js
+#dependencies
+node_modules/
+
+# next.js
+/.next/
+/out/
