@@ -19,7 +19,7 @@
       {
         "namedComponents": "arrow-function"
       }
-    ],
+    ],    
     // NOTE: add warning for any types
     "@typescript-eslint/no-explicit-any": "warn",
     // NOTE: added this to prevent props plowing/drilling. since we're using typescript, we can use the types to define the props
