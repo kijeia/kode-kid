@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "generate:component": "node scripts/create-component"
   },
   "dependencies": {
     "autoprefixer": "10.4.15",
