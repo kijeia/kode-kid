@@ -1,1 +1,14 @@
-// add styles here
+.header {
+    @apply flex xs:flex-row xxs:flex-col items-center justify-between;
+    .nav-bar {
+        @apply flex items-center justify-evenly xxs:py-6 xxs:space-x-6 sm:space-x-10;
+        > button {
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+            
+            &:hover {
+                transform: scale(1.2); /* Adjust the scaling factor as needed */
+            }
+        }
+    }
+}
