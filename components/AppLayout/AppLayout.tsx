@@ -6,7 +6,7 @@ import Header from '../_high/Header'
 const AppLayout = ({ children }: AppLayoutProps) => (
   <div className='app-layout'>
     <Header />
-    <div>{children}</div>
+    {children}
     <Footer />
   </div>
 )

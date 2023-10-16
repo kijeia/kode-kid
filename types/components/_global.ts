@@ -3,3 +3,7 @@ import React from "react";
 export interface AppLayoutProps {
     children: React.ReactNode
 }
+
+export interface ContentProps {
+    children: React.ReactNode
+}

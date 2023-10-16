@@ -1,0 +1,33 @@
+.content {
+    @apply flex flex-1 flex-col justify-between;
+    > .projects-container {
+        @apply w-full flex justify-between py-4;
+        > .projects {
+            @apply w-1/3  h-[250px] flex flex-col place-content-end;
+            > h1 {
+                @apply text-primary font-ropa text-2xl py-3;
+            }
+            > .list {
+                @apply flex flex-wrap;
+                > .name{
+                    @apply cursor-pointer  p-2;
+
+                    > span {
+                        @apply h-10 pb-1  px-2 text-white font-nunito-semi;
+                        transition: color 0.5s, letter-spacing 0.5s;
+                        &:hover{
+                            @apply text-[#EFA3A3] tracking-wider border-b-2 border-dark;
+
+                        }
+                    }
+                }
+
+                &.--selected {
+
+                }
+            }
+        }
+       
+    }
+    
+}
