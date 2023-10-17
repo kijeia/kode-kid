@@ -17,17 +17,19 @@ module.exports = {
       },
       textColor: {
         'primary': '#ED8D8D',
-        'secondary': '#8D6262'
+        'secondary': '#8D6262',
+        'dark': '#4D4545',
       },
       fontFamily: {
         'ropa': ['Ropa Sans', 'sans-serif'],
         'nunito': ['Nunito Sans', 'sans-serif'],
         'nunito-semi': ['Nunito Sans', 'sans-serif'],
-        'nunito-bold': ['Nunito Sans', 'sans-seri'],
+        'nunito-bold': ['Nunito Sans', 'sans-serif'],
       },
       borderColor: {
         'primary': '#ED8D8D',
-        'secondary': '#8D6262'
+        'secondary': '#8D6262',
+        'dark': '#4D4545',
       },
       screens: {
         'xs': '375px',

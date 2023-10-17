@@ -1,0 +1,48 @@
+.content {
+    @apply flex flex-1 flex-col justify-between;
+    > .projects-container {
+        @apply w-full flex xxs:flex-col sm:flex-row justify-between py-4;
+
+        > .projects {
+            @apply xxs:w-full xs:w-3/4 sm:w-3/4  md:w-1/2 lg:w-[32%] xxs:h-fit xs:min-h-[250px] flex flex-col;
+            align-content: flex-end;
+            justify-content: flex-end;
+
+            > h1 {
+                @apply text-primary font-ropa xxs:text-3xl sm:text-2xl py-3 text-start;
+            }
+
+            > .list {
+                @apply flex xxs:flex-col sm:flex-row xxs:flex-nowrap sm:flex-wrap xxs:justify-center xs:justify-start;
+                
+                > .name{
+                    @apply cursor-pointer p-2;
+
+                    > a {
+                        @apply h-10 pb-1  px-2 text-white font-nunito xxs:text-sm sm:text-base;
+                        transition: color 0.5s, letter-spacing 0.5s;
+                        
+                        &:hover{
+                            @apply text-[#EFA3A3] tracking-wider border-b-2 border-dark;
+
+                        }
+                        &.--selected {
+                            @apply border-secondary border-b-2 font-nunito font-semibold;
+                        }
+                    }
+                    
+                }
+
+                
+            }
+        }
+        > .image {
+            @apply w-full flex xxs:justify-center sm:justify-end items-end;
+            > img {
+                @apply object-contain;
+            }
+        }
+       
+    }
+    
+}
