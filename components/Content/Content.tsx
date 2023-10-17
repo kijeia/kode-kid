@@ -98,8 +98,8 @@ const Content = ({ children }: ContentProps) => (
         <Image
           src='/assets/img/linear-art.png'
           alt='linear-art'
-          width={220}
-          height={220}
+          width={200}
+          height={200}
         />
       </div>
     </div>
