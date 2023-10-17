@@ -12,7 +12,7 @@ const sample = [
     ]
   },
   {
-    name: 'Sample 2',
+    name: 'Sample 2 Lorem',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vestibulum ac justo eu efficitur. Nullam facilisis velit ut dapibus cursus. Vivamus varius, ipsum at ultricies cursus, lectus nisl fringilla tellus, vel vehicula augue turpis id dolor. Fusce nec luctus elit. In hac habitasse platea dictumst. Phasellus et justo id est venenatis varius eu eu nisi. Proin vel neque vel dui aliquet bibendum.',
     links: [
@@ -94,12 +94,12 @@ const Content = ({ children }: ContentProps) => (
         </div>
       </div>
       {/* Image */}
-      <div>
+      <div className='image'>
         <Image
           src='/assets/img/linear-art.png'
           alt='linear-art'
-          width={250}
-          height={250}
+          width={220}
+          height={220}
         />
       </div>
     </div>
