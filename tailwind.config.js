@@ -24,7 +24,7 @@ module.exports = {
         'ropa': ['Ropa Sans', 'sans-serif'],
         'nunito': ['Nunito Sans', 'sans-serif'],
         'nunito-semi': ['Nunito Sans', 'sans-serif'],
-        'nunito-bold': ['Nunito Sans', 'sans-seri'],
+        'nunito-bold': ['Nunito Sans', 'sans-serif'],
       },
       borderColor: {
         'primary': '#ED8D8D',
