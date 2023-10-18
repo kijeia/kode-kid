@@ -1,3 +1,5 @@
+'use client'
+
 import { AppLayoutProps } from '@/types/components/_global'
 import React from 'react'
 import Footer from '../_high/Footer'

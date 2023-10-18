@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 }
 
 const RootLayout = ({ children }: PropsWithChildren) => (
-  <html lang='en'>{children}</html>
+  <html lang='en'>
+    <body>{children}</body>
+  </html>
 )
 export default RootLayout
