@@ -1,5 +1,58 @@
 .projects {
     @apply flex flex-1 flex-col justify-between;
+    > .selected-project {
+        @apply flex flex-1 flex-col justify-center xxs:px-1 lg:px-[10%] sm:px-2 xxs:mb-4 lg:mb-2 py-4;
+        opacity: 0;
+        transform: translateX(50%);
+        transition: opacity 0.3s ease, transform 0.4s ease; /* Adjust the duration and easing function as needed */
+        &.--visible {
+            opacity: 1;
+            transform: translateX(0);        
+        }
+      > .__title {
+        @apply flex items-center space-x-2 pb-3;
+         > span {
+            @apply text-white font-nunito text-2xl;
+         }
+            
+        }
+      >  p.__description{
+        @apply font-nunito text-white text-lg;
+      }
+
+      > .__bottom {
+        @apply flex items-end xxs:flex-col lg:flex-row  justify-between pt-4;
+        > .__technologies {
+            @apply text-white text-base xxs:gap-y-1 sm:gap-y-0  gap-x-2 items-baseline flex flex-wrap xxs:max-h-full lg:max-h-40 xxs:max-w-full lg:max-w-[70%];
+            > h1  {
+                @apply text-[#EFA3A3] text-xl ;
+            }
+
+        }
+        >  .__links {
+            @apply flex xxs:justify-start lg:justify-end items-end w-full space-x-8 xxs:pt-6 lg:pt-10;
+            > a {
+                @apply text-primary;
+            }
+          }
+      }
+
+      
+
+      > .__welcome {
+        @apply font-nunito text-white xs:text-base sm:text-lg xxs:px-0 lg:px-0 xl:px-32 xxs:text-justify;
+        > span {
+            @apply text-2xl pr-2 text-[#EFA3A3];
+        }
+      }
+
+    }
+
+    > hr {
+        @apply border-b-[1px] border-dark xxs:mx-0  lg:mr-32 xl:-mb-20 lg:-mb-24;
+      }
+      
+     
     > .projects-container {
         @apply w-full flex xxs:flex-col sm:flex-row justify-between py-4;
 

@@ -7,6 +7,9 @@ const Header = ({}) => (
   <div className='header'>
     <Image src='/assets/img/logo.png' alt='logo' width={60} height={60} />
     <div className='nav-bar'>
+      <button id='profile-btn' type='button' onClick={() => {}}>
+        <Image src='/assets/img/me.png' alt='profile' width={28} height={28} />
+      </button>
       <button id='email-btn' type='button' onClick={() => {}}>
         <Image src='/assets/img/email.png' alt='email' width={28} height={28} />
       </button>
@@ -17,9 +20,6 @@ const Header = ({}) => (
           width={28}
           height={28}
         />
-      </button>
-      <button id='profile-btn' type='button' onClick={() => {}}>
-        <Image src='/assets/img/me.png' alt='profile' width={28} height={28} />
       </button>
     </div>
   </div>
