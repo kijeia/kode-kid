@@ -47,6 +47,8 @@ const Projects = () => {
                 <h1>Key Technologies: </h1>
                 {selectedProject?.keyTechnologies?.map((stack, i) => (
                   <div key={stack}>
+                    {i + 1 === selectedProject?.keyTechnologies?.length! &&
+                      ' and '}
                     {stack}
                     {i + 1 < selectedProject?.keyTechnologies?.length! && ','}
                   </div>
@@ -54,7 +56,7 @@ const Projects = () => {
               </div>
               <div className='__links'>
                 {selectedProject?.links?.map(({ label, link }) => (
-                  <Link key={label} href={link}>
+                  <Link key={label} href={link} target='_blank'>
                     {label}
                   </Link>
                 ))}
