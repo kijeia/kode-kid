@@ -1,5 +1,5 @@
 .header {
-    @apply flex xs:flex-row xxs:flex-col items-center justify-between;
+    @apply flex xs:flex-row xxs:flex-col items-center justify-between px-10;
     .nav-bar {
         @apply flex items-center justify-evenly xxs:py-6 xxs:space-x-6 sm:space-x-10;
         > button {

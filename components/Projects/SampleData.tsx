@@ -7,7 +7,7 @@ export interface ProjectSchema {
 
 const SampleProjects: ProjectSchema[] = [
   {
-    name: 'Betterteem Web-App',
+    name: 'Go Betterteem',
     description:
       'Betterteem AI® enables organizations to predict and mitigate unwanted employee resignations.',
     links: [
@@ -22,6 +22,7 @@ const SampleProjects: ProjectSchema[] = [
       'Storybook',
       'Redux',
       'Zustand',
+      'CLI',
       'Tiptap Integration',
       'i18n Translation',
       'Weglot Translation',
@@ -29,7 +30,7 @@ const SampleProjects: ProjectSchema[] = [
     ]
   },
   {
-    name: 'Betterteem Mobile-App',
+    name: 'Betterteem Play App',
     description:
       'Betterteem AI® enables organizations to predict and mitigate unwanted employee resignations.',
     links: [
@@ -53,7 +54,8 @@ const SampleProjects: ProjectSchema[] = [
   },
   {
     name: 'Taxikel',
-    description: 'Get deliveries and run errands from your device.',
+    description:
+      'Get deliveries and run errands from your device. The web app is still in development and in private mode.',
     links: [{ label: 'View Site', link: 'https://www.taxikel.com' }],
     keyTechnologies: ['React JS', 'JavaScript', 'CSS', 'Redux']
   },
@@ -68,10 +70,16 @@ const SampleProjects: ProjectSchema[] = [
         link: 'https://apps.apple.com/ph/app/eczema-app-nala/id1545319742'
       }
     ],
-    keyTechnologies: ['React Native', 'JavaScript', 'CSS', 'i18n Translation']
+    keyTechnologies: [
+      'React Native',
+      'JavaScript',
+      'CSS',
+      'Redux',
+      'i18n Translation'
+    ]
   },
   {
-    name: 'Edusuite Mobile-App',
+    name: 'Edusuite App',
     description:
       'Edusuite’s AI-driven technology analyzes data and resources, enabling school administrators, faculty, and students to enhance resource allocation and make informed decisions.',
     links: [{ label: 'View Site', link: 'https://www.edusuite.asia' }],

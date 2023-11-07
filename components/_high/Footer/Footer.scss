@@ -1,6 +1,6 @@
 .footer {
-    @apply w-full xxs:pt-10 sm:pt-0 xxs:text-center sm:text-right;
+    @apply xxs:mt-0 sm:mt-0 lg:mt-2 w-full xxs:mb-4  xxs:justify-center sm:justify-end  py-2 px-10 flex items-center  bg-secondary;
     > .text {
-        @apply text-primary font-nunito-semi xxs:text-sm sm:text-base;
+        @apply text-white font-nunito-semi  xxs:text-xs text-sm;
     }
 }
