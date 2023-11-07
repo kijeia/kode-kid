@@ -27,7 +27,9 @@ const Projects = () => {
       {/* SELECTED PROJECT */}
 
       <div
-        className={`selected-project ${isProjectVisible ? '--visible' : ''}`}
+        className={`selected-project hover ${
+          isProjectVisible ? '--visible' : ''
+        }`}
       >
         {selectedProject !== null ? (
           <>
@@ -64,11 +66,11 @@ const Projects = () => {
             </div>
           </>
         ) : (
-          <div className='__welcome'>
+          <div className='__welcome hover'>
             {/* Welcome Message */}
 
-            <span>Welcome</span>
-            {`to my digital playground! I'm a React JS and React Native enthusiast, weaving pixels into delightful user experiences. With an iced coffee in hand and a passion for clean code, I bring ideas to life. Explore the bits and bytes of my portfolio, where each line of code tells a story. Let's build something awesome together!`}
+            <div>Welcome.</div>
+            {`~ to my digital playground! I'm a React JS and React Native enthusiast, weaving pixels into delightful user experiences. With an iced coffee in hand and a passion for clean code, I bring ideas to life. Explore the bits and bytes of my portfolio, where each line of code tells a story. Let's build something awesome together!`}
           </div>
         )}
       </div>

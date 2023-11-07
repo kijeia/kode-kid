@@ -1,101 +1,127 @@
 .projects {
-    @apply flex flex-1 flex-col justify-between;
-    > .selected-project {
-        @apply flex flex-1 flex-col justify-center xxs:px-1 lg:px-[10%] sm:px-2 xxs:mb-4 lg:mb-2 py-4;
-        opacity: 0;
-        transform: translateX(50%);
-        transition: opacity 0.3s ease, transform 0.4s ease; /* Adjust the duration and easing function as needed */
-        &.--visible {
-            opacity: 1;
-            transform: translateX(0);        
+  @apply flex flex-1 flex-col justify-between;
+
+  > .selected-project {
+    @apply flex flex-1 flex-col justify-center xxs:px-1 lg:px-[10%]  sm:px-2 xxs:mb-4 lg:mb-2 py-4 mx-10 z-10;
+    opacity: 0;
+    transform: translateX(50%);
+    transition:
+      opacity 0.3s ease,
+      transform 0.4s ease; /* Adjust the duration and easing function as needed */
+    &.--visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    @media screen and (min-width: 768px) {
+    &.hover {
+        --c: #e6ccb2; /* the border color */
+        --b: 5px;    /* the border thickness*/
+        --g: 2px;     /* the gap on hover */
+
+        padding: calc(var(--g) + var(--b));
+        --_g: #e6ccb2 15%,var(--c) 0;
+        background:
+        conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g))
+        var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+        conic-gradient(            at bottom var(--b) left  var(--b),var(--_g))
+        0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+        transition: .3s, background-position .3s .3s;
+        cursor: pointer;
+
+        &:hover {
+            @apply px-10 border-2 rounded-sm border-white;
+            --_i: 100%;
+            transition: .3s, background-size .3s .3s;
+
+            & .__title > span{
+              @apply text-white;
+            }
+            &  .__bottom > .__links > a {
+                @apply text-white;
+            }
+  
         }
-      > .__title {
-        @apply flex items-center space-x-2 pb-3;
-         > span {
-            @apply text-white font-nunito text-2xl;
-         }
-            
+
+    }
+    }
+    > .__title {
+      @apply flex items-center space-x-2 pb-3 ;
+      > span {
+        @apply text-primary font-ropa font-medium text-3xl ;
+      }
+    }
+    > p.__description {
+      @apply font-nunito text-secondary text-lg;
+    }
+
+    > .__bottom {
+      @apply flex items-end xxs:flex-col lg:flex-row  justify-between pt-2;
+      > .__technologies {
+        @apply text-secondary text-base xxs:gap-y-1 sm:gap-y-0  gap-x-2 items-baseline flex flex-wrap xxs:max-h-full lg:max-h-40 xxs:max-w-full lg:max-w-[70%];
+        > h1 {
+          @apply text-secondary font-medium text-lg;
         }
-      >  p.__description{
-        @apply font-nunito text-white text-lg;
+      }
+      > .__links {
+        @apply flex xxs:justify-start lg:justify-end items-end w-full space-x-8 xxs:pt-6 lg:pt-10 ;
+        > a {
+          @apply text-primary font-semibold border-secondary border-b-2;
+        }
+      }
+    }
+
+    > .__welcome {
+      @apply font-nunito text-secondary xs:text-base sm:text-lg xxs:px-0 lg:px-0 xl:px-32 xxs:text-justify;
+      > div {
+        @apply text-5xl font-medium pr-2 pb-2 tracking-wider text-primary;
+      }
+    }
+  }
+
+  > hr {
+    @apply border-b-[1px] border-secondary xxs:mx-0  lg:mr-32 xl:-mb-20 lg:-mb-24;
+  }
+
+  > .projects-container {
+    @apply bg-secondary w-full flex xxs:flex-col sm:flex-row justify-between py-4 px-10;
+
+    > .projects-sub-container {
+      @apply xxs:w-full xs:w-3/4  md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col;
+      align-content: flex-end;
+      justify-content: flex-end;
+
+      > h1 {
+        @apply text-white font-ropa xxs:text-3xl sm:text-2xl py-3 text-start;
       }
 
-      > .__bottom {
-        @apply flex items-end xxs:flex-col lg:flex-row  justify-between pt-4;
-        > .__technologies {
-            @apply text-white text-base xxs:gap-y-1 sm:gap-y-0  gap-x-2 items-baseline flex flex-wrap xxs:max-h-full lg:max-h-40 xxs:max-w-full lg:max-w-[70%];
-            > h1  {
-                @apply text-[#EFA3A3] text-xl ;
+      > .list {
+        @apply flex xxs:flex-col sm:flex-row xxs:flex-nowrap sm:flex-wrap xxs:justify-center xs:justify-start;
+
+        > .name {
+          @apply cursor-pointer p-2;
+
+          > button {
+            @apply h-10 text-white font-nunito xxs:text-sm sm:text-base;
+            transition:
+              color 0.5s,
+              letter-spacing 0.5s;
+
+            &:hover {
+              @apply text-[#EFA3A3] tracking-wider;
             }
 
-        }
-        >  .__links {
-            @apply flex xxs:justify-start lg:justify-end items-end w-full space-x-8 xxs:pt-6 lg:pt-10;
-            > a {
-                @apply text-primary;
+            &.--selected {
+              @apply font-nunito font-semibold;
             }
           }
-      }
-
-      
-
-      > .__welcome {
-        @apply font-nunito text-white xs:text-base sm:text-lg xxs:px-0 lg:px-0 xl:px-32 xxs:text-justify;
-        > span {
-            @apply text-2xl pr-2 text-[#EFA3A3];
         }
       }
-
     }
-
-    > hr {
-        @apply border-b-[1px] border-dark xxs:mx-0  lg:mr-32 xl:-mb-20 lg:-mb-24;
+    > .image {
+      @apply w-full flex xxs:justify-center sm:justify-end items-end;
+      > img {
+        @apply object-contain;
       }
-      
-     
-    > .projects-container {
-        @apply w-full flex xxs:flex-col sm:flex-row justify-between py-4;
-
-        > .projects-sub-container {
-            @apply xxs:w-full xs:w-3/4  md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col;
-            align-content: flex-end;
-            justify-content: flex-end;
-
-            > h1 {
-                @apply text-primary font-ropa xxs:text-3xl sm:text-2xl py-3 text-start;
-            }
-
-            > .list {
-                @apply flex xxs:flex-col sm:flex-row xxs:flex-nowrap sm:flex-wrap xxs:justify-center xs:justify-start;
-                
-                > .name{
-                    @apply cursor-pointer p-2 ;
-
-                    > button {
-                        @apply h-10 text-white font-nunito xxs:text-sm sm:text-base;
-                        transition: color 0.5s, letter-spacing 0.5s;
-                        
-                        &:hover{
-                            @apply text-[#EFA3A3] tracking-wider border-b-2 border-dark;
-
-                        }
-                        &.--selected {
-                            @apply border-secondary border-b-2 font-nunito font-semibold;
-                        }
-                    }
-                    
-                }
-
-                
-            }
-        }
-        > .image {
-            @apply w-full flex xxs:justify-center sm:justify-end items-end;
-            > img {
-                @apply object-contain;
-            }
-        }
-       
     }
-    
+  }
 }
