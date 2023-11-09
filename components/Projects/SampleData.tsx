@@ -1,6 +1,7 @@
 export interface ProjectSchema {
   name: string
   description: string
+  roles?: Array<string>
   links: Array<{ label: string; link: string }>
   keyTechnologies?: Array<string>
 }
@@ -9,7 +10,14 @@ const SampleProjects: ProjectSchema[] = [
   {
     name: 'Go Betterteem',
     description:
-      'Betterteem AI® enables organizations to predict and mitigate unwanted employee resignations.',
+      'Betterteem AI® empowers companies to anticipate and proactively address employee attrition. Its capabilities encompass team member engagement check-ins, surveys, feedback, recognition programs, perks, and more, fostering a supportive workplace environment.',
+    roles: [
+      'Played a role in enhancing and maintaining the core features and functionalities.',
+      'Managed multilingual support by utilizing Weglot and i18n for language translation.',
+      'Integration and maintenance of Tiptap for formatting check-ins and feedback.',
+      'Stripe integration for payment method and subscription.',
+      'Collaborated closely with Backend Developers for API integration.'
+    ],
     links: [
       { label: 'View Web App', link: 'https://go.betterteem.com/auth/login' },
       { label: 'View Site', link: 'https://www.betterteem.com' }
@@ -23,6 +31,7 @@ const SampleProjects: ProjectSchema[] = [
       'Redux',
       'Zustand',
       'CLI',
+      'Storybook',
       'Tiptap Integration',
       'i18n Translation',
       'Weglot Translation',
@@ -32,7 +41,7 @@ const SampleProjects: ProjectSchema[] = [
   {
     name: 'Betterteem Play App',
     description:
-      'Betterteem AI® enables organizations to predict and mitigate unwanted employee resignations.',
+      "Bringing the employee experience into a single mobile application. This app offers a range of features, including daily mood check-ins, acknowledgment of check-ins, survey responses, employee recognition, perk redemptions, and more. Moreover, it's accessible on both Android and iOS platforms.",
     links: [
       {
         label: 'IOS',

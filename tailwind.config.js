@@ -13,12 +13,13 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       backgroundColor: {
-        'primary': '#ebd6c1',
-        'secondary': '#2d4654',
+        'primary': '#252422',
+        'secondary': '#252422',
       },
       textColor: {
         'primary': '#ea9694',
-        'secondary': '#2d4654',
+        'secondary': '#fffcf2',
+        'mint': '#368f8b'
       },
       fontFamily: {
         'ropa': ['Ropa Sans', 'sans-serif'],
@@ -27,8 +28,8 @@ module.exports = {
         'nunito-bold': ['Nunito Sans', 'sans-serif'],
       },
       borderColor: {
-        'primary': '#EFA3A3',
-        'secondary': '#2d4654',
+        'primary': '#fffcf2',
+        'secondary': '#368f8b',
       },
       screens: {
         'xs': '375px',
