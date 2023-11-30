@@ -6,7 +6,7 @@ export interface ProjectSchema {
   keyTechnologies?: Array<string>
 }
 
-const SampleProjects: ProjectSchema[] = [
+export const MajorProjects: ProjectSchema[] = [
   {
     name: 'Go Betterteem',
     description:
@@ -60,14 +60,43 @@ const SampleProjects: ProjectSchema[] = [
       'Zustand',
       'CLI'
     ]
-  },
-  {
-    name: 'Taxikel',
-    description:
-      'Get deliveries and run errands from your device. The web app is still in development and in private mode.',
-    links: [{ label: 'View Site', link: 'https://www.taxikel.com' }],
-    keyTechnologies: ['React JS', 'JavaScript', 'CSS', 'Redux']
-  },
+  }
+  //   {
+  //     name: 'Taxikel',
+  //     description:
+  //       'Get deliveries and run errands from your device. The web app is still in development and in private mode.',
+  //     links: [{ label: 'View Site', link: 'https://www.taxikel.com' }],
+  //     keyTechnologies: ['React JS', 'JavaScript', 'CSS', 'Redux']
+  //   },
+  //   {
+  //     name: 'NALA - Neurodermitis App',
+  //     description:
+  //       'NALA has been developed by a dedicated team, including experts in dermatology, psychology, integrative medicine, sleep, and nutrition, all with a deep understanding of eczema.',
+  //     links: [
+  //       { label: 'View Site', link: 'https://nala.care/en/' },
+  //       {
+  //         label: 'View Mobile App',
+  //         link: 'https://apps.apple.com/ph/app/eczema-app-nala/id1545319742'
+  //       }
+  //     ],
+  //     keyTechnologies: [
+  //       'React Native',
+  //       'JavaScript',
+  //       'CSS',
+  //       'Redux',
+  //       'i18n Translation'
+  //     ]
+  //   },
+  //   {
+  //     name: 'Edusuite App',
+  //     description:
+  //       'Edusuite’s AI-driven technology analyzes data and resources, enabling school administrators, faculty, and students to enhance resource allocation and make informed decisions.',
+  //     links: [{ label: 'View Site', link: 'https://www.edusuite.asia' }],
+  //     keyTechnologies: ['React Native', 'CSS', 'JavaScript', 'Redux']
+  //   }
+]
+
+export const CollaborativeProjects: ProjectSchema[] = [
   {
     name: 'NALA - Neurodermitis App',
     description:
@@ -93,7 +122,14 @@ const SampleProjects: ProjectSchema[] = [
       'Edusuite’s AI-driven technology analyzes data and resources, enabling school administrators, faculty, and students to enhance resource allocation and make informed decisions.',
     links: [{ label: 'View Site', link: 'https://www.edusuite.asia' }],
     keyTechnologies: ['React Native', 'CSS', 'JavaScript', 'Redux']
+  },
+  {
+    name: 'Taxikel',
+    description:
+      'Get deliveries and run errands from your device. The web app is still in development and in private mode.',
+    links: [{ label: 'View Site', link: 'https://www.taxikel.com' }],
+    keyTechnologies: ['React JS', 'JavaScript', 'CSS', 'Redux']
   }
 ]
 
-export default SampleProjects
+export const PersonalProjects: ProjectSchema[] = []

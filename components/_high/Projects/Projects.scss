@@ -1,1 +1,63 @@
-// add styles here
+.projects {
+    @apply flex flex-1 flex-col justify-between;
+  
+    > .projects-container {
+      @apply bg-secondary w-full flex xxs:flex-col sm:flex-row justify-between py-4 px-10;
+  
+      > .projects-sub-container {
+        @apply xxs:w-full xs:w-3/4  md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col;
+        align-content: flex-end;
+        justify-content: flex-end;
+  
+        > h1 {
+          @apply flex items-center gap-x-4 text-secondary font-ropa xxs:text-3xl sm:text-2xl py-3 text-start;
+          
+          > button {
+            @apply font-ropa text-base capitalize space-x-4 pt-1 text-primary cursor-pointer;
+            transition:
+                color 0.5s,
+                font-size 0.2s,
+                letter-spacing 0.5s;
+            > span {
+              @apply pl-3 text-secondary xxs:text-xl sm:text-lg;
+            }
+            &.--selected {
+              @apply text-secondary font-ropa xxs:text-2xl sm:text-xl;
+            }
+          }
+
+         
+        }
+  
+        > .list {
+          @apply flex xxs:flex-col sm:flex-row xxs:flex-nowrap sm:flex-wrap xxs:justify-center xs:justify-start;
+  
+          > .name {
+            @apply cursor-pointer p-2;
+  
+            > button {
+              @apply h-10 text-secondary font-nunito xxs:text-sm sm:text-base;
+              transition:
+                color 0.5s,
+                letter-spacing 0.5s;
+  
+              &:hover {
+                @apply text-mint tracking-wider;
+              }
+  
+              &.--selected {
+                @apply font-nunito font-semibold;
+              }
+            }
+          }
+        }
+      }
+      > .image {
+        @apply w-full flex xxs:justify-center sm:justify-end items-end;
+        > img {
+          @apply object-contain;
+        }
+      }
+    }
+  }
+  
