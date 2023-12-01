@@ -4,9 +4,6 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 
 const Content = ({ selectedProject }: ContentProps) => {
-  //   const [selectedProject, setSelectedProject] = useState<ProjectSchema | null>(
-  //     null
-  //   )
   const [isProjectVisible, setIsProjectVisible] = useState(false)
 
   // Animation for Welcome Message
@@ -41,9 +38,7 @@ const Content = ({ selectedProject }: ContentProps) => {
   return (
     <div className='content'>
       <div
-        className={`selected-project hover ${
-          isProjectVisible ? '--visible' : ''
-        }`}
+        className={`selected-project ${isProjectVisible ? '--visible' : ''}`}
       >
         {selectedProject !== null ? (
           <>

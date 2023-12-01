@@ -2,7 +2,7 @@
     @apply flex flex-1 flex-col justify-between;
   
     > .selected-project {
-      @apply flex flex-1 flex-col justify-center xxs:px-3 lg:px-[14%] xl:px-[10%] sm:px-2 xxs:mb-4 lg:mb-2 xxs:py-4 lg:py-10 xl:py-8  mx-10 z-10 border-[1px] xxs:rounded-lg lg:rounded-full xl:rounded-full border-dashed border-primary;
+      @apply flex flex-1 flex-col mt-4 min-h-[500px] justify-center xxs:px-3 lg:px-[14%] xl:px-[10%] sm:px-2 xxs:mb-4 lg:mb-2 xxs:py-4 lg:py-10 xl:py-4  mx-10 z-10 border-[1px] xxs:rounded-lg lg:rounded-full xl:rounded-full border-dashed border-primary;
       opacity: 0;
       transform: translateX(50%);
       transition:
