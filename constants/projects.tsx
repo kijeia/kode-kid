@@ -12,6 +12,7 @@ export const MajorProjects: ProjectSchema[] = [
     description:
       'Betterteem AI® empowers companies to anticipate and proactively address employee attrition. Its capabilities encompass team member engagement check-ins, surveys, feedback, recognition programs, perks, and more, fostering a supportive workplace environment.',
     roles: [
+      'Frontend Software Developer',
       'Played a role in enhancing and maintaining the core features and functionalities.',
       'Managed multilingual support by utilizing Weglot and i18n for language translation.',
       'Integration and maintenance of Tiptap for formatting check-ins and feedback.',
@@ -51,6 +52,14 @@ export const MajorProjects: ProjectSchema[] = [
         label: 'Android',
         link: 'https://apkcombo.com/betterteem-play/com.betterteem.mobile/'
       }
+    ],
+    roles: [
+      'Mobile Developer',
+      'Played a role in enhancing and maintaining the core features and functionalities.',
+      'Managed multilingual support by utilizing i18n for language translation.',
+      'Collaborated closely with Backend Developers for API integration.',
+      'Provided support during the deployment process in development mode for both iOS and Android.',
+      'Ensure compatibility of components for both iOS and Android platforms.'
     ],
     keyTechnologies: [
       'React Native',
@@ -108,6 +117,12 @@ export const CollaborativeProjects: ProjectSchema[] = [
         link: 'https://apps.apple.com/ph/app/eczema-app-nala/id1545319742'
       }
     ],
+    roles: [
+      'Mobile Developer',
+      'Contributed to troubleshooting and fixing various components.',
+      'Implemented and customized a progress chart or pie chart.',
+      'Incorporated manual translation using i18n.'
+    ],
     keyTechnologies: [
       'React Native',
       'JavaScript',
@@ -121,14 +136,12 @@ export const CollaborativeProjects: ProjectSchema[] = [
     description:
       'Edusuite’s AI-driven technology analyzes data and resources, enabling school administrators, faculty, and students to enhance resource allocation and make informed decisions.',
     links: [{ label: 'View Site', link: 'https://www.edusuite.asia' }],
+    roles: [
+      'Mobile Developer',
+      'Developed and enhanced components for improved functionality and user experience.',
+      'Conducted API integration to streamline data exchange and enhance overall system capabilities.'
+    ],
     keyTechnologies: ['React Native', 'CSS', 'JavaScript', 'Redux']
-  },
-  {
-    name: 'Taxikel',
-    description:
-      'Get deliveries and run errands from your device. The web app is still in development and in private mode.',
-    links: [{ label: 'View Site', link: 'https://www.taxikel.com' }],
-    keyTechnologies: ['React JS', 'JavaScript', 'CSS', 'Redux']
   }
 ]
 
