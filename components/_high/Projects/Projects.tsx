@@ -18,6 +18,8 @@ const Projects = ({ handleProject }: ProjectsProps) => {
     Categories | ''
   >('')
 
+  const [isTooltipVisible, setTooltipVisibility] = useState(false)
+
   const manageProject = (p: ProjectSchema) => {
     if (selectedProject === p?.name) handleProject(null)
     else handleProject(p)
@@ -26,6 +28,8 @@ const Projects = ({ handleProject }: ProjectsProps) => {
   }
 
   const manageCategory = (c: Categories) => {
+    if (c === 'personal') return // disabled when selected category is 'personal'
+
     selectProjectCategory(c as Categories)
 
     if (c !== selectedProjectCategory) handleProject(null) // trigger if user change its category
@@ -36,6 +40,8 @@ const Projects = ({ handleProject }: ProjectsProps) => {
       setSelectedProjectList(CollaborativeProjects)
     else setSelectedProjectList([])
   }
+
+  console.log(isTooltipVisible, 'tooltip')
 
   return (
     <div className='projects'>
@@ -49,10 +55,23 @@ const Projects = ({ handleProject }: ProjectsProps) => {
                 key={c}
                 id={c}
                 type='button'
-                className={`${selectedProjectCategory === c && '--selected'}`}
+                className={`${c === 'personal' && 'tooltip-container'} ${
+                  selectedProjectCategory === c && '--selected'
+                }`}
                 onClick={() => manageCategory(c as Categories)}
+                onMouseEnter={() =>
+                  c === 'personal' && setTooltipVisibility(true)
+                }
+                onMouseLeave={() =>
+                  c === 'personal' && setTooltipVisibility(false)
+                }
               >
                 {c} {i < 2 && <span className='text-secondary'> / </span>}
+                {isTooltipVisible && c === 'personal' && (
+                  <div className='tooltip'>
+                    Hang in there, Work in progress . . .{' '}
+                  </div>
+                )}
               </button>
             ))}
           </h1>

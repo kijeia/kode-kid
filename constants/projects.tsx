@@ -138,7 +138,7 @@ export const CollaborativeProjects: ProjectSchema[] = [
     links: [{ label: 'View Site', link: 'https://www.edusuite.asia' }],
     roles: [
       'Mobile Developer',
-      'Developed and enhanced components for improved functionality and user experience.',
+      'Developed and enhanced components to improve functionality and user experience.',
       'Conducted API integration to streamline data exchange and enhance overall system capabilities.'
     ],
     keyTechnologies: ['React Native', 'CSS', 'JavaScript', 'Redux']

@@ -24,6 +24,26 @@
             &.--selected {
               @apply text-secondary font-ropa xxs:text-2xl sm:text-xl;
             }
+
+            &.tooltip-container {
+              @apply relative;
+            }
+            
+            > .tooltip {
+              @apply normal-case text-primary p-2 rounded-t-lg rounded-br-lg bg-white w-[140px];
+              text-align: start;
+              position: absolute;
+              z-index: 1;
+              top: -20;
+              bottom: 0;
+              transition: opacity 0.3s;
+            }
+            
+            .tooltip-container:hover .tooltip {
+              visibility: visible;
+              opacity: 1;
+            }
+            
           }
 
          
