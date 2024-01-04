@@ -6,4 +6,5 @@ export interface ContentProps {
 
 export interface ProjectsProps {
     handleProject: (selectedProject: ProjectSchema | null) => void
+    selectedProject: ProjectSchema | null
 }

@@ -10,8 +10,7 @@ import React, { useState } from 'react'
 const categories = ['work', 'collaborative', 'personal']
 type Categories = 'work' | 'collaborative' | 'personal'
 
-const Projects = ({ handleProject }: ProjectsProps) => {
-  const [selectedProject, setSelectedProject] = useState('')
+const Projects = ({ handleProject, selectedProject }: ProjectsProps) => {
   const [selectedProjectList, setSelectedProjectList] =
     useState<ProjectSchema[]>(MajorProjects)
   const [selectedProjectCategory, selectProjectCategory] = useState<
@@ -21,10 +20,8 @@ const Projects = ({ handleProject }: ProjectsProps) => {
   const [isTooltipVisible, setTooltipVisibility] = useState(false)
 
   const manageProject = (p: ProjectSchema) => {
-    if (selectedProject === p?.name) handleProject(null)
+    if (selectedProject?.name === p?.name) handleProject(null)
     else handleProject(p)
-
-    setSelectedProject(p?.name)
   }
 
   const manageCategory = (c: Categories) => {
@@ -40,8 +37,6 @@ const Projects = ({ handleProject }: ProjectsProps) => {
       setSelectedProjectList(CollaborativeProjects)
     else setSelectedProjectList([])
   }
-
-  console.log(isTooltipVisible, 'tooltip')
 
   return (
     <div className='projects'>
@@ -78,11 +73,14 @@ const Projects = ({ handleProject }: ProjectsProps) => {
 
           <div className='list'>
             {selectedProjectList?.map((p) => (
-              <div key={p.name} className='name'>
+              // eslint-disable-next-line react/no-array-index-key
+              <div key={`${p.name}`} className='name'>
                 <button
                   id={`project-${p.name}`}
                   type='button'
-                  className={selectedProject === p.name ? '--selected' : ''}
+                  className={
+                    selectedProject?.name === p.name ? '--selected' : ''
+                  }
                   onClick={() => manageProject(p)}
                 >
                   {p.name}

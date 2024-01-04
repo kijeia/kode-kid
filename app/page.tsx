@@ -13,7 +13,10 @@ const Home = () => {
     <AppLayout>
       <div className='flex flex-1 flex-col justify-between'>
         <Content selectedProject={selectedProject ?? null} />
-        <Projects handleProject={setSelectedProject} />
+        <Projects
+          handleProject={setSelectedProject}
+          selectedProject={selectedProject as ProjectSchema}
+        />
       </div>
     </AppLayout>
   )
