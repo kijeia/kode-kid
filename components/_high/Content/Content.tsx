@@ -65,7 +65,7 @@ const Content = ({ selectedProject }: ContentProps) => {
               <div className='__technologies'>
                 <h1>Key Technologies: </h1>
                 {selectedProject?.keyTechnologies?.map((stack, i) => (
-                  <div key={stack}>
+                  <div key={`${stack}-${Math.random()}`}>
                     {i + 1 === selectedProject?.keyTechnologies?.length! &&
                       ' and '}
                     {stack}
