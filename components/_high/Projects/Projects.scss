@@ -5,7 +5,7 @@
       @apply bg-secondary w-full flex xxs:flex-col sm:flex-row justify-between py-4 px-10;
   
       > .projects-sub-container {
-        @apply xxs:w-full xs:w-3/4  md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col;
+        @apply  xxs:w-full xs:w-3/4  md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col;
         align-content: flex-end;
         justify-content: flex-end;
   
