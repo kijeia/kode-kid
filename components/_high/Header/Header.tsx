@@ -2,6 +2,7 @@
 
 import { HeaderProps } from '@/types/components/_high'
 import Image from 'next/image'
+import Link from 'next/link'
 
 // eslint-disable-next-line no-empty-pattern
 const Header = ({ setToHome }: HeaderProps) => (
@@ -16,14 +17,14 @@ const Header = ({ setToHome }: HeaderProps) => (
       <button id='email-btn' type='button' onClick={() => {}}>
         <Image src='/assets/img/email.png' alt='email' width={28} height={28} />
       </button>
-      <button id='github-btn' type='button' onClick={() => {}}>
+      <Link href='https://github.com/kijeia?tab=repositories' target='_blank'>
         <Image
           src='/assets/img/github.png'
           alt='email'
           width={28}
           height={28}
         />
-      </button>
+      </Link>
     </div>
   </div>
 )
