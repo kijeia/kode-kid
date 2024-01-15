@@ -14,9 +14,9 @@ const Header = ({ setToHome }: HeaderProps) => (
       <button id='profile-btn' type='button' onClick={() => {}}>
         <Image src='/assets/img/me.png' alt='profile' width={28} height={28} />
       </button>
-      <button id='email-btn' type='button' onClick={() => {}}>
+      <a href='mailto:kijeia.gonzales@gmail.com'>
         <Image src='/assets/img/email.png' alt='email' width={28} height={28} />
-      </button>
+      </a>
       <Link href='https://github.com/kijeia?tab=repositories' target='_blank'>
         <Image
           src='/assets/img/github.png'
