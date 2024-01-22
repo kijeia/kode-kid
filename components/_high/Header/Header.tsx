@@ -3,15 +3,25 @@
 import { HeaderProps } from '@/types/components/_high'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 
 // eslint-disable-next-line no-empty-pattern
 const Header = ({ setToHome }: HeaderProps) => {
   const router = useRouter()
+  const params = useSearchParams()
+
+  const handleRoute = () => {
+    if (params.get('page') === 'me') {
+      // if in profile page
+      router.replace('/')
+    } else {
+      setToHome()
+    }
+  }
 
   return (
     <div className='header'>
-      <button id='logo-btn' type='button' onClick={setToHome}>
+      <button id='logo-btn' type='button' onClick={handleRoute}>
         <Image src='/assets/img/logo.png' alt='logo' width={60} height={60} />
       </button>
       <div className='nav-bar'>
