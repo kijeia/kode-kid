@@ -1,21 +1,21 @@
 .profile {
-  @apply px-6;
+  @apply xxs:px-4 lg:px-6;
   > section {
-    @apply px-4 text-secondary font-nunito text-base;
+    @apply px-4 text-secondary font-nunito xxs:text-sm lg:text-base;
     > .intro {
-        @apply flex flex-row space-x-8 px-4 items-center ;
+        @apply flex xxs:flex-col lg:flex-row xxs:space-x-0 lg:space-x-8 xxs:px-0 lg:px-4 items-center;
         > img {
           @apply rounded-full object-cover h-36 w-36;
         }
         > .name {
-            @apply gap-y-4; 
+            @apply gap-y-4 xxs:text-center lg:text-start xxs:pt-4 lg:pt-0; 
             > span {
-                @apply text-2xl font-nunito-bold font-medium text-primary;
+                @apply xxs:text-xl lg:text-2xl font-nunito-bold font-medium text-primary;
             }
         }
     }
     > .message {
-        @apply flex flex-row items-center justify-between space-x-8 lg:mt-4;
+        @apply flex xxs:flex-col lg:flex-row items-center justify-between space-x-8 xxs:gap-y-4 xxs:py-4 lg:py-0;
         > div {
             @apply text-justify w-10/12;
             
@@ -38,7 +38,7 @@
             }
         }
         > .button-container {
-            @apply flex flex-col w-fit ml-16 my-2 space-y-2;
+            @apply flex flex-col w-fit xxs:ml-2 lg:ml-16 my-2 space-y-2;
             > button {
                 @apply text-start font-ropa capitalize;
                 
