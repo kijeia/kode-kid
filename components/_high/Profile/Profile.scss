@@ -1,0 +1,70 @@
+.profile {
+  @apply px-6;
+  > section {
+    @apply px-4 text-secondary font-nunito text-base;
+    > .intro {
+        @apply flex flex-row space-x-8 px-4 items-center ;
+        > img {
+          @apply rounded-full object-cover h-36 w-36;
+        }
+        > .name {
+            @apply gap-y-4; 
+            > span {
+                @apply text-2xl font-nunito-bold font-medium text-primary;
+            }
+        }
+    }
+    > .message {
+        @apply flex flex-row items-center justify-between space-x-8 lg:mt-4;
+        > div {
+            @apply text-justify w-10/12;
+            
+        }
+    }
+    > .expertise-education {
+        > .title {
+            @apply pt-3 font-ropa text-primary text-xl;
+        }
+        > div {
+            @apply py-0.5;
+        }
+    }
+    > .social {
+        @apply flex flex-col;
+        > .title {
+            @apply flex flex-row space-x-3 items-center;
+            > div {
+                @apply font-ropa text-primary text-3xl border-b-secondary border-b-2 h-fit;
+            }
+        }
+        > .button-container {
+            @apply flex flex-col w-fit ml-16 my-2 space-y-2;
+            > button {
+                @apply text-start font-ropa capitalize;
+                
+                > .copied-text {
+                    @apply text-sm tracking-wide border-[#0088A3] border-b-2 ml-2;
+                    opacity: 1;
+                }
+
+                > .copied-hidden {
+                    opacity: 0;
+                    transition: opacity 1s ease-out;
+
+                }
+
+            }
+        }
+        > .contact-message {
+            @apply text-justify mt-3;
+        }
+
+    }
+  }
+
+  > .divider {
+    @apply border-divider m-4;
+
+  }
+ 
+}
