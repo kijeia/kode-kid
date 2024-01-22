@@ -3,30 +3,49 @@
 import { HeaderProps } from '@/types/components/_high'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
 // eslint-disable-next-line no-empty-pattern
-const Header = ({ setToHome }: HeaderProps) => (
-  <div className='header'>
-    <button id='logo-btn' type='button' onClick={setToHome}>
-      <Image src='/assets/img/logo.png' alt='logo' width={60} height={60} />
-    </button>
-    <div className='nav-bar'>
-      <button id='profile-btn' type='button' onClick={() => {}}>
-        <Image src='/assets/img/me.png' alt='profile' width={28} height={28} />
+const Header = ({ setToHome }: HeaderProps) => {
+  const router = useRouter()
+
+  return (
+    <div className='header'>
+      <button id='logo-btn' type='button' onClick={setToHome}>
+        <Image src='/assets/img/logo.png' alt='logo' width={60} height={60} />
       </button>
-      <a href='mailto:kijeia.gonzales@gmail.com'>
-        <Image src='/assets/img/email.png' alt='email' width={28} height={28} />
-      </a>
-      <Link href='https://github.com/kijeia?tab=repositories' target='_blank'>
-        <Image
-          src='/assets/img/github.png'
-          alt='email'
-          width={28}
-          height={28}
-        />
-      </Link>
+      <div className='nav-bar'>
+        <button
+          id='profile-btn'
+          type='button'
+          onClick={() => router.replace('?page=me')}
+        >
+          <Image
+            src='/assets/img/me.png'
+            alt='profile'
+            width={28}
+            height={28}
+          />
+        </button>
+        <a href='mailto:kijeia.gonzales@gmail.com'>
+          <Image
+            src='/assets/img/email.png'
+            alt='email'
+            width={28}
+            height={28}
+          />
+        </a>
+        <Link href='https://github.com/kijeia?tab=repositories' target='_blank'>
+          <Image
+            src='/assets/img/github.png'
+            alt='email'
+            width={28}
+            height={28}
+          />
+        </Link>
+      </div>
     </div>
-  </div>
-)
+  )
+}
 
 export default Header

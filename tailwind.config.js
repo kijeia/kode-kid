@@ -30,7 +30,8 @@ module.exports = {
       },
       borderColor: {
         'primary': '#fffcf2',
-        'secondary': '#368f8b',
+        'secondary': '#8D6262',
+        'divider' : '#4D4545',
       },
       screens: {
         'xs': '375px',

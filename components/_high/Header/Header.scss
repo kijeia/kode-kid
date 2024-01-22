@@ -12,6 +12,7 @@
         }
 
         > a {
+            @apply cursor-pointer;
             display: inline-block;
             transition: transform 0.2s ease-in-out;
             

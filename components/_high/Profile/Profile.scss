@@ -1,0 +1,70 @@
+.profile {
+  @apply xxs:px-4 lg:px-6;
+  > section {
+    @apply px-4 text-secondary font-nunito xxs:text-sm lg:text-base;
+    > .intro {
+        @apply flex xxs:flex-col lg:flex-row xxs:space-x-0 lg:space-x-8 xxs:px-0 lg:px-4 items-center;
+        > img {
+          @apply rounded-full object-cover h-36 w-36;
+        }
+        > .name {
+            @apply gap-y-4 xxs:text-center lg:text-start xxs:pt-4 lg:pt-0; 
+            > span {
+                @apply xxs:text-xl lg:text-2xl font-nunito-bold font-medium text-primary;
+            }
+        }
+    }
+    > .message {
+        @apply flex xxs:flex-col lg:flex-row items-center justify-between space-x-8 xxs:gap-y-4 xxs:py-4 lg:py-0;
+        > div {
+            @apply text-justify w-10/12;
+            
+        }
+    }
+    > .expertise-education {
+        > .title {
+            @apply pt-3 font-ropa text-primary text-xl;
+        }
+        > div {
+            @apply py-0.5;
+        }
+    }
+    > .social {
+        @apply flex flex-col;
+        > .title {
+            @apply flex flex-row space-x-3 items-center;
+            > div {
+                @apply font-ropa text-primary text-3xl border-b-secondary border-b-2 h-fit;
+            }
+        }
+        > .button-container {
+            @apply flex flex-col w-fit xxs:ml-2 lg:ml-16 my-2 space-y-2;
+            > button {
+                @apply text-start font-ropa capitalize;
+                
+                > .copied-text {
+                    @apply text-sm tracking-wide border-[#0088A3] border-b-2 ml-2;
+                    opacity: 1;
+                }
+
+                > .copied-hidden {
+                    opacity: 0;
+                    transition: opacity 1s ease-out;
+
+                }
+
+            }
+        }
+        > .contact-message {
+            @apply text-justify mt-3;
+        }
+
+    }
+  }
+
+  > .divider {
+    @apply border-divider m-4;
+
+  }
+ 
+}
