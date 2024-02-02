@@ -5,15 +5,15 @@
       @apply bg-secondary w-full flex xxs:flex-col sm:flex-row justify-between py-4 px-10;
   
       > .projects-sub-container {
-        @apply  xxs:w-full xs:w-3/4  md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col;
+        @apply xxs:w-full sm:w-3/4 md:w-1/2 lg:w-2/3 xxs:h-full xs:min-h-[250px] flex flex-col ;
         align-content: flex-end;
         justify-content: flex-end;
   
         > h1 {
-          @apply w-[400px] flex items-center gap-x-4 text-secondary font-ropa xxs:text-3xl sm:text-2xl py-3 text-start;
+          @apply xxs:w-full sm:w-[400px] flex xxs:flex-col sm:flex-row xxs:justify-center sm:justify-start items-center xxs:gap-x-2 sm:gap-x-4 text-secondary font-ropa xxs:text-lg md:text-3xl sm:text-2xl py-3 text-start;
           
           > button {
-            @apply font-ropa text-base capitalize space-x-4 pt-1 text-primary cursor-pointer;
+            @apply font-ropa  text-base capitalize space-x-4 pt-1 text-primary cursor-pointer;
             transition:
                 color 0.5s,
                 font-size 0.2s,
@@ -22,7 +22,7 @@
               @apply pl-3 text-secondary xxs:text-xl sm:text-lg;
             }
             &.--selected {
-              @apply text-secondary font-ropa xxs:text-2xl sm:text-xl;
+              @apply text-secondary font-ropa xxs:text-2xl sm:text-xl ;
             }
 
             &.tooltip-container {
@@ -50,7 +50,7 @@
         }
   
         > .list {
-          @apply flex xxs:flex-col sm:flex-row xxs:flex-nowrap sm:flex-wrap xxs:justify-center xs:justify-start;
+          @apply flex  xxs:flex-col sm:flex-row xxs:flex-nowrap sm:flex-wrap xxs:justify-center sm:justify-start xxs:text-center sm:text-start xxs:pb-4 sm:pb-0;
   
           > .name {
             @apply cursor-pointer p-2;
@@ -70,6 +70,10 @@
               }
             }
           }
+        }
+
+        > hr {
+          @apply border-b-[1px] border-dashed border-divider xxs:inline-block sm:hidden;
         }
       }
       > .image {

@@ -61,7 +61,13 @@ const Projects = ({ handleProject, selectedProject }: ProjectsProps) => {
                   c === 'personal' && setTooltipVisibility(false)
                 }
               >
-                {c} {i < 2 && <span className='text-secondary'> / </span>}
+                {c}{' '}
+                {i < 2 && (
+                  <span className='text-secondary xxs:hidden sm:inline-block'>
+                    {' '}
+                    /{' '}
+                  </span>
+                )}
                 {isTooltipVisible && c === 'personal' && (
                   <div className='tooltip'>
                     Hang in there, Work in progress . . .{' '}
@@ -70,6 +76,8 @@ const Projects = ({ handleProject, selectedProject }: ProjectsProps) => {
               </button>
             ))}
           </h1>
+
+          <hr />
 
           <div className='list'>
             {selectedProjectList?.map((p) => (
